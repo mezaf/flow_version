@@ -250,10 +250,139 @@
         "name" : "HTTP POC",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 429.0,
-          "y" : 114.0
+          "x" : 1333.1294555664062,
+          "y" : 143.0
         },
-        "processGroups" : [ ],
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "0581cecf-9894-3389-b50d-53b3e4fd4770",
+              "id" : "a36cebc1-97cb-3e5e-ba72-dd9248a989b5",
+              "name" : "Funnel",
+              "type" : "FUNNEL"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "0581cecf-9894-3389-b50d-53b3e4fd4770",
+            "identifier" : "7b417cdb-455a-371a-ac46-3b97b6cc7367",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "0581cecf-9894-3389-b50d-53b3e4fd4770",
+              "id" : "1e6758eb-c926-3763-baac-5f60bf1a968c",
+              "name" : "GenerateFlowFile",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          } ],
+          "controllerServices" : [ ],
+          "funnels" : [ {
+            "componentType" : "FUNNEL",
+            "groupIdentifier" : "0581cecf-9894-3389-b50d-53b3e4fd4770",
+            "identifier" : "a36cebc1-97cb-3e5e-ba72-dd9248a989b5",
+            "position" : {
+              "x" : 449.0000155947258,
+              "y" : 323.0000128227105
+            }
+          } ],
+          "groupIdentifier" : "e28f99f6-1ce5-33a2-bccc-4cfdc5b291be",
+          "identifier" : "0581cecf-9894-3389-b50d-53b3e4fd4770",
+          "inputPorts" : [ ],
+          "labels" : [ ],
+          "name" : "asd",
+          "outputPorts" : [ ],
+          "position" : {
+            "x" : 1551.9986695093871,
+            "y" : 751.0276161204301
+          },
+          "processGroups" : [ ],
+          "processors" : [ {
+            "autoTerminatedRelationships" : [ ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.9.2"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "0581cecf-9894-3389-b50d-53b3e4fd4770",
+            "identifier" : "1e6758eb-c926-3763-baac-5f60bf1a968c",
+            "name" : "GenerateFlowFile",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 299.0000155947258,
+              "y" : 82.00001282271052
+            },
+            "properties" : {
+              "character-set" : "UTF-8",
+              "File Size" : "0B",
+              "Batch Size" : "1",
+              "Unique FlowFiles" : "false",
+              "Data Format" : "Text"
+            },
+            "propertyDescriptors" : {
+              "character-set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "character-set",
+                "sensitive" : false
+              },
+              "File Size" : {
+                "displayName" : "File Size",
+                "identifiesControllerService" : false,
+                "name" : "File Size",
+                "sensitive" : false
+              },
+              "generate-ff-custom-text" : {
+                "displayName" : "Custom Text",
+                "identifiesControllerService" : false,
+                "name" : "generate-ff-custom-text",
+                "sensitive" : false
+              },
+              "Batch Size" : {
+                "displayName" : "Batch Size",
+                "identifiesControllerService" : false,
+                "name" : "Batch Size",
+                "sensitive" : false
+              },
+              "Unique FlowFiles" : {
+                "displayName" : "Unique FlowFiles",
+                "identifiesControllerService" : false,
+                "name" : "Unique FlowFiles",
+                "sensitive" : false
+              },
+              "Data Format" : {
+                "displayName" : "Data Format",
+                "identifiesControllerService" : false,
+                "name" : "Data Format",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "yieldDuration" : "1 sec"
+          } ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { }
+        } ],
         "processors" : [ {
           "autoTerminatedRelationships" : [ "No Retry", "Retry" ],
           "bulletinLevel" : "WARN",
